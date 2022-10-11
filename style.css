@@ -1,0 +1,106 @@
+/* title */
+div.title {
+    color: #ffffff;
+    background-color: #696969;
+    padding-left: 2%;
+}
+
+/* body */
+body {
+    background-color: #dddddd;
+}
+
+/* subtitle */
+h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+/* swiper */
+.swiper-container {
+    position: relative;
+}
+
+.swiper--wrapper {
+    /* wrapperのサイズを調整 */
+    width: 100%;
+    height: 100%;
+    /* padding: 10% 10%; */
+}
+
+.swiper-slide {
+    /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    bottom: 30px;
+    margin: 5% 0%;
+}
+  
+/* .swiper-slide:nth-child(3n + 1) {
+    background-color: #de4439;
+}
+  
+.swiper-slide:nth-child(3n + 2) {
+    background-color: #fcd500;
+}
+  
+.swiper-slide:nth-child(3n + 3) {
+    background-color: #53c638;
+} */
+
+/* img */
+img {
+    width: 80%;
+    height: 80%;
+}
+.skills img {
+    width: 20%;
+    height: 20%;
+}
+
+.frontend {
+    text-align: center;
+    background-color: rgb(240, 78, 78);
+}
+.backend {
+    text-align: center;
+    background-color: rgb(83, 89, 255);
+}
+
+
+/* page top button */
+.space {
+    height: 5000px;
+}
+.page_top {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .3s;
+    color: #00A6C4;
+    background: #fff;
+    
+  /*   デフォルトは非表示 */
+    opacity: 0;
+}
+.page_top:hover {
+    box-shadow: 0 0 10px #00A6C4;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #696969;
+}
