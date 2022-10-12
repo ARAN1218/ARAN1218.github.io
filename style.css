@@ -38,18 +38,6 @@ h2 {
     bottom: 30px;
     margin: 5% 0%;
 }
-  
-/* .swiper-slide:nth-child(3n + 1) {
-    background-color: #de4439;
-}
-  
-.swiper-slide:nth-child(3n + 2) {
-    background-color: #fcd500;
-}
-  
-.swiper-slide:nth-child(3n + 3) {
-    background-color: #53c638;
-} */
 
 /* img */
 img {
@@ -57,10 +45,18 @@ img {
     height: 80%;
 }
 .skills img {
-    width: 20%;
-    height: 20%;
+    width: 50%;
+    height: 50%;
 }
 
+.data-analysis {
+    text-align: center;
+    background-color: rgb(78, 240, 97);
+}
+.environment {
+    text-align: center;
+    background-color: rgb(78, 232, 240);
+}
 .frontend {
     text-align: center;
     background-color: rgb(240, 78, 78);
@@ -68,6 +64,34 @@ img {
 .backend {
     text-align: center;
     background-color: rgb(83, 89, 255);
+}
+
+
+.skills-contents {
+    width: 100%;
+}
+.flexbox {
+    display: flex;
+}
+.box {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 500px) {
+    .flexbox {
+        display: block;
+    }
+    .box {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.achievements {
+    text-align: center;
+}
+.certifications {
+    text-align: center;
 }
 
 
