@@ -6,6 +6,17 @@ const works = new Swiper(".works", {
   pagination: {
     el: ".swiper-pagination"
   },
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
+  },
 
   // ナビボタンが必要なら追加
   navigation: {
@@ -20,6 +31,17 @@ const studied_books = new Swiper(".studied-books", {
   // ページネーションが必要なら追加
   pagination: {
     el: ".swiper-pagination"
+  },
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true
   },
 
   // ナビボタンが必要なら追加
