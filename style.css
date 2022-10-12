@@ -8,6 +8,8 @@ div.title {
 /* body */
 body {
     background-color: #dddddd;
+}
+div.body {
     overflow-x: hidden;
 }
 
