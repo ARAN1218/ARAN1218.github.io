@@ -88,6 +88,11 @@ img {
     height: 50%;
 }
 
+.info ul {
+    list-style: none;
+    width:fit-content;
+    margin: auto;
+}
 .data-analysis {
     text-align: center;
     background-color: rgb(78, 240, 97);
@@ -120,6 +125,7 @@ img {
     width: 100%;
     height: 100%;
 }
+
 @media screen and (max-width: 500px) {
     .flexbox {
         display: block;

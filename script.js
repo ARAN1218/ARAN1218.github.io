@@ -30,7 +30,8 @@ const studied_books = new Swiper(".studied-books", {
   loop: true,
   // ページネーションが必要なら追加
   pagination: {
-    el: ".swiper-pagination"
+    el: ".swiper-pagination",
+    type: "fraction"
   },
   effect: "coverflow",
   grabCursor: true,
