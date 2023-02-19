@@ -5,40 +5,7 @@ div.title {
     padding-left: 2%;
     
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-nav.menu{
-    display: flex;
-    height: 100%;
-    background-color: dimgray;
-    box-sizing: border-box;
-}
-
-ul.menu {
-    vertical-align: middle;
-    width: 90px;
-}
-
-li.menu {
-    cursor: pointer;
-    float: left;
-    list-style: none;
-    text-align: center;
-    width: 50%;
-    padding: 0% 5%;
-}
-li.menu a{
-    vertical-align: middle;
-    display: inline-block;
-    padding: 50% 5%;
-    color: #ffffff;
-}
-li.menu a:hover{
-    color: rgb(200, 200, 200);
-}
-li.menu+ li.menu{
-    border-left: 1px solid black;
+    align-items: center;
 }
 
 
@@ -56,6 +23,29 @@ h2 {
     font-size: xx-large;
 }
 
+/* table */
+.table {
+    margin: auto;
+}
+.table-tbody tr:nth-child(2n+1) {
+    background: #eeeeee;
+}
+.table-thead th {
+    padding: 10px;
+    background: #696969;
+    border-right: solid 1px #778ca3;
+    color: #ffffff;
+}
+.table-tbody th:last-child {
+    border-right: none;
+}
+.table-tbody td {
+    padding: 10px;
+    border-right: solid 1px #778ca3; 
+}
+.table-tbody td:last-child {
+    border-right: none;
+}
 
 /* swiper */
 .swiper-container {
@@ -78,12 +68,6 @@ h2 {
     max-width: 100%;
 }
 
-/* img */
-img {
-    width: 80%;
-    height: 80%;
-}
-
 /* 自己紹介の画像・テキスト配置(PC用) */
 @media screen and (min-width: 500px) {
     .about .title {
@@ -92,8 +76,6 @@ img {
     }
     .about .introduction_text {
         margin-left: 5%;
-        display: flex;
-	    align-items: center;
     }
     .about img {
         width: 30%;
@@ -114,6 +96,70 @@ img {
         height: 30%;
     }
 }
+
+/* img */
+img {
+    width: 80%;
+    height: 80%;
+}
+
+.works img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+.works button {
+    width: 90%;
+    height: 90%;
+    border: none;
+    background: transparent;
+}
+
+dialog {
+    max-width: 80%;
+    overflow-x: hidden;
+}
+
+/* ダイアログの閉じるボタン作成 */
+.square_btn {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #333; /* 枠の調整 */
+    background: #fff; /* ボタンの背景色 */
+    position: absolute;
+    right: -0.1%;
+    top: -0.1%;
+}
+.square_btn::before, .square_btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px; /* 棒の幅（太さ） */
+    height: 27px; /* 棒の高さ */
+    background: #333; /* バツ印の色 */
+}
+.square_btn::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.square_btn::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+/* ダイアログのアクセスボタン作成 */
+.access {
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: none;
+    padding: 10px;
+}
+.access:hover {
+    color: red;
+    box-shadow: 0 0 10px #383838;
+}
+
 
 .skills img {
     width: 50%;
@@ -153,7 +199,7 @@ img {
 }
 .flexbox {
     display: flex;
-    justify-content: center; /* 自己紹介を作るときに追加した */
+    justify-content: center;
     align-items: center;
 }
 .box {
@@ -180,6 +226,47 @@ img {
 }
 .certifications {
     text-align: center;
+}
+.thank {
+    text-align: center;
+}
+
+
+/* お問い合わせフォーム */
+/* PC用 */
+@media screen and (min-width: 1050px) {
+    #staticform {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+/* スマホ・タブレット用 */
+@media screen and (max-width: 1050px) {
+    #staticform {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+.form-element {
+    margin-top: 10px;
+    margin-right: 10%;
+    margin-bottom: 10px;
+}
+
+.form-element input {
+    width: 50%;
+}
+
+.form-element textarea {
+    width: 100%;
+    height: 90%;
+}
+
+.form-element label {
+    display: flex;
 }
 
 

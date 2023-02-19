@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel=apple-touch-icon sizes="180x180" href="img/system/apple-touch-icon.png">
-    <link rel=icon type=image/png href="img/system/favicon.png">
+    <link rel=icon type=image/png href="img/system/ARAN_logo.png">
     <title>ARAN Portfolio</title>
 </head>
 <body>
@@ -17,63 +18,214 @@
 
     <header>
         <div class="title">
-            <h1>ARAN Portfolio</h1>
-            <nav class="menu">
-                <ul class="menu">
-                    <li class="menu"><a class="links" href="https://github.com/ARAN1218" style="text-decoration: none;">Github</a></li>
-                </ul>
-            </nav>
-            <!-- <nav>
-                <ul>
-                    <li>
-                        <a class="links" href="https://github.com/ARAN1218" style="text-decoration: none; color: #ffffff;">Github</a>
-                    </li>
-                </ul>
-            </nav> -->
+            <h1><a href="https://aran1218.github.io" style="text-decoration: none; color: white;">ARAN Portfolio</a></h1>
+            <button type="button" class="menu-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span class="MenuBtn-BarFrame">
+                    <span class="MenuBtn-BarFrame-FirstBar"></span>
+                    <span class="MenuBtn-BarFrame-SecondBar"></span>
+                    <span class="MenuBtn-BarFrame-ThirdBar"></span>
+                </span>
+            </button>
+            <div class="menu-container">
+                <div class="menu">
+                    <div class="menu__item"><a href="#about">ABOUT</a></div>
+                    <div class="menu__item"><a href="#works">WORKs</a></div>
+                    <div class="menu__item"><a href="#skills">SKILLs</a></div>
+                    <div class="menu__item"><a href="#achievements">ACHIVEMENTs</a></div>
+                    <div class="menu__item"><a href="#certifications">CERTIFICATIONs</a></div>
+                    <div class="menu__item"><a href="#studied-books">STUDIED BOOKs</a></div>
+                    <div class="menu__item"><a href="#contact">CONTACT</a></div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div class="about">
-        <h2>About</h2>
+    <div class="about" id="about">
+        <h2>ABOUT</h2><br>
         <div class="flexbox">
-            <img src="img/system/me.webp" alt="">
+            <img src="img/system/ARAN_logo.png" alt="">
             <div class="introduction_text">
                 <div>
                     <p class="title" style="font-size: x-large;">ARAN</p>
-                    <p>2019/3　神奈川県立麻溝台高等学校　卒業</p>
-                    <p>2020/4　青山学院大学 理工学部 経営システム工学科　入学</p>
-                    <p>2024/3　青山学院大学 理工学部 経営システム工学科　卒業見込み</p>
+                    <p class="title">学歴</p>
+                    <table class="about-table">
+                        <tbody>
+                            <tr class="about-tr">
+                                <td valign="top">2019/3　</td>
+                                <td>神奈川県立麻溝台高等学校　卒業</td>
+                            </tr>
+                            <tr class="about-tr">
+                                <td valign="top">2020/4　</td>
+                                <td>青山学院大学 理工学部 経営システム工学科　入学</td>
+                            </tr>
+                            <tr class="about-tr">
+                                <td valign="top">2024/3　</td>
+                                <td>青山学院大学 理工学部 経営システム工学科　卒業見込み</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p class="title">趣味</p>
-                    <p>アプリ制作</p>
-                    <p>Webデータ分析</p>
-                    <p>ハトを観察する🐦</p>
+                    <ul>
+                        <li>アプリ制作</li>
+                        <li>Webデータ分析</li>
+                        <li>ハトの観察🐦</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="swiper-container">
-        <div class="works">
-            <h2>My Works</h2>
+        <div class="works" id="works">
+            <h2>WORKs</h2>
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="https://pigeon-detection.azurewebsites.net"><img class="works" src="img/works/pigeon_detection.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://game-recommender.deta.dev"><img class="works" src="img/works/game_recommender.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://password-generators.deta.dev"><img class="works" src="img/works/password_generators.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://aran-ds.deta.dev"><img class="works" src="img/works/aran_ds.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://aran.pythonanywhere.com"><img class="works" src="img/works/PiedPiper.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://github.com/ARAN1218/Algorithms"><img class="works" src="img/works/Algorithms_library.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://github.com/ARAN1218/Statistics_learning"><img class="works" src="img/works/Statistics_library.webp" alt=""></a></div>
-                <div class="swiper-slide"><a href="https://github.com/ARAN1218/ML_Learning"><img class="works" src="img/works/MachineLearning_library.webp" alt=""></a></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-01" background-image="img/works/pigeon_detection.webp"><img class="works" src="img/works/pigeon_detection.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-02"><img class="works" src="img/works/game_recommender.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-03"><img class="works" src="img/works/password_generators.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-04"><img class="works" src="img/works/aran_ds.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-05"><img class="works" src="img/works/PiedPiper.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-06"><img class="works" src="img/system/favicon.png" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-07"><img class="works" src="img/works/Algorithms_library.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-08"><img class="works" src="img/works/Statistics_library.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-09"><img class="works" src="img/works/MachineLearning_library.webp" alt=""></button></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
+
+        <!-- ダイアログページ -->
+        <dialog id="modal-01">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>Pigeon Detection AI</p>
+                    <img src="img/modals/modal-01_1.png" alt="">
+                    <p>
+                        AIが画像の中からハトを探します🐦<br>
+                        ※初回アクセスに少々時間がかかります
+                    </p>
+                    <p>使用技術：HTML/CSS/JS, JQuery, Python, flask</p>
+                    <p>制作期間：3ヶ月</p>
+                    <a class="access" href="https://pigeon-detection.azurewebsites.net">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/Pigeon-Detection-AI">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-02">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>Game Recommender</p>
+                    <p>AIがあなたの好みに沿ったゲームを提案します。</p>
+                    <p>使用技術：HTML/CSS/JS, Python, flask</p>
+                    <p>制作期間：1日（※アップデートに2日）</p>
+                    <a class="access" href="https://game-recommender.deta.dev">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/Game-Recommender">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-03">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>Password Generators</p>
+                    <p>あなたの個人情報から唯一のパスワードを生成します。</p>
+                    <p>使用技術：HTML/CSS/JS, Python, flask</p>
+                    <p>制作期間：5日</p>
+                    <a class="access" href="https://password-generators.deta.dev/">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/Password-Generators">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-04">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>ARAN DS</p>
+                    <p>CSVファイルを読み込んで簡単なデータ可視化・データ分析をします(パソコン推奨)</p>
+                    <p>
+                        当時pyscriptという技術が公開されたとの情報を聞き、最新の技術をすぐに体験したいと考え、試しに作ったWebアプリです。
+                        Pythonの強みを活かしたアプリにしたいと考え、データ分析をブラウザ上で簡単に行える利便性を追求したものを作成しました。
+                        実際に使った見たことで、Pyscriptの起動に時間がかかることがネックであることが確かであり、これからの進化に十分期待できる技術であると思いました。
+                    </p>
+                    <p>使用技術：HTML/CSS, Python(Pyscript), flask</p>
+                    <p>制作期間：計10日程度</p>
+                    <a class="access" href="https://aran-ds.deta.dev/">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/ARAN-DS">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-05">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>AI Apps</p>
+                    <p>人工知能を用いて様々な予測を行います。</p>
+                    <p>使用技術：HTML/CSS, Python, Django</p>
+                    <p>制作期間：3ヶ月</p>
+                    <a class="access" href="https://aran.pythonanywhere.com">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/Aoyamafes2021">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-06">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>My portfolio site</p>
+                    <p>私のポートフォリオサイトです。</p>
+                    <p>使用技術：HTML/CSS/JS</p>
+                    <p>制作期間：2022/10/12 ~ NOW</p>
+                    <a class="access" href="https://aran1218.github.io">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/ARAN1218.github.io">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-07">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>Algorithms_library</p>
+                    <p>数理最適化に関するアルゴリズムをPythonで一から実装したプログラム集です。</p>
+                    <p>また、PythonのTkinterライブラリを用いてアルゴリズム可視化アプリを作成しました。</p>
+                    <p>(アプリに関してはデスクトップアプリをgithubのReleases機能で配信しています。)</p>
+                    <p>使用技術：Python, Tkinter, Pyinstaller</p>
+                    <p>制作期間：2023/01/22 ~ NOW</p>
+                    <a class="access" href="https://github.com/ARAN1218/Algorithms">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-08">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>Statistics_library</p>
+                    <p>統計に関する種々の分析手法をPythonで一から実装したプログラム集です。</p>
+                    <p>使用技術：Python</p>
+                    <p>制作期間：2021/11/28 ~ NOW</p>
+                    <a class="access" href="https://github.com/ARAN1218/Statistics_learning">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-09">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p>MachineLearning_library</p>
+                    <p>種々の機械学習手法をPythonで一から実装したプログラム集です。</p>
+                    <p>使用技術：Python</p>
+                    <p>制作期間：2022/11/20 ~ NOW</p>
+                    <a class="access" href="https://github.com/ARAN1218/ML_Learning">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
     </div>
 
-    <div class="skills">
+    <div class="skills" id="skills">
         <!-- https://worldvectorlogo.com/ -->
-        <h2>Skills</h2>
+        <h2>SKILLs</h2>
         <div class="info">
             <nav>
                 <ul>
@@ -144,26 +296,79 @@
         </div>
     </div>
 
-    <div class="achievements">
-        <h2>Achievements</h2>
-        <p>Mynavi Co.(Data Scientist) 3Days internship：2022/8/17 ~ 2022/8/19</p>
-        <p>NTT comware Co.(Data Scientist) 3Days internship：2022/9/7 ~ 2022/9/9</p>
-        <p>Chugai Pharmaceutical Co.(Data Scientist) Long-Term internship：2022/9/1 ~ 2022/9/28</p>
-        <p style="color: red;">Oishi Kenko inc.(Data Scientist) Long-Term internship：2021/9/21 ~ NOW</p>
+    <div class="achievements" id="achievements">
+        <h2>ACHIEVEMENTs</h2>
+        <table class="table">
+            <thead class="table-thead">
+                <tr>
+                    <th>date</th>
+                    <th>type</th>
+                    <th>details</th>
+                </tr>
+            </thead>
+            <tbody class="table-tbody">
+                <tr>
+                    <td>2022/8/17 ~ 2022/8/19</td>
+                    <td>3Days internship (Data Scientist)</td>
+                    <td>Mynavi Co.</td>
+                </tr>
+                <tr>
+                    <td>2022/9/7 ~ 2022/9/9</td>
+                    <td>3Days internship (Data Scientist)</td>
+                    <td>NTT comware Co.</td>
+                </tr>
+                <tr>
+                    <td>2022/9/1 ~ 2022/9/28</td>
+                    <td>Long-Term internship (Data Scientist)</td>
+                    <td>Chugai Pharmaceutical Co.</td>
+                </tr>
+                <tr>
+                    <td style="color: red;">2021/9/21 ~ NOW</td>
+                    <td style="color: red;">Long-Term internship (Data Scientist)</td>
+                    <td style="color: red;">Oishi Kenko inc.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="certifications">
-        <h2>Certifications</h2>
-        <p>ITパスポート試験：令和2年2月</p>
-        <p>JDLA Deep Learning for GENERAL 2020#1：令和2年3月</p>
-        <p>基本情報技術者試験：令和3月3月</p>
-        <p>統計検定2級：令和4年5月</p>
+    <div class="certifications" id="certifications">
+        <h2>CERTIFICATIONs</h2>
+        <table class="table">
+            <thead class="table-thead">
+                <tr>
+                    <th>date</th>
+                    <th>certification</th>
+                </tr>
+            </thead>
+            <tbody class="table-tbody">
+                <tr>
+                    <td>令和2年2月</td>
+                    <td>ITパスポート試験</td>
+                </tr>
+                <tr>
+                    <td>令和2年3月</td>
+                    <td>JDLA Deep Learning for GENERAL 2020#1</td>
+                </tr>
+                <tr>
+                    <td>令和3月3月</td>
+                    <td>基本情報技術者試験</td>
+                </tr>
+                <tr>
+                    <td>令和4年5月</td>
+                    <td>統計検定2級</td>
+                </tr>
+                <tr>
+                    <td style="color: red;">NOW CHALLENGING</td>
+                    <td style="color: red;">統計検定準1級</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
 
     <div class="swiper-container">
-        <div class="studied-books">
-            <h2>Main Studied Books</h2>
+        <div class="studied-books" id="studied-books">
+            <h2>STUDIED BOOKs</h2>
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="https://www.amazon.co.jp/統計学入門-基礎統計学Ⅰ-東京大学教養学部統計学教室/dp/4130420658/"><img src="img/books/statistics_introduction.webp" alt=""></a></div>
                 <div class="swiper-slide"><a href="https://www.amazon.co.jp/前処理大全-データ分析のためのSQL-Python実践テクニック-本橋-智光/dp/4774196479"><img src="img/books/maeshori.webp" alt=""></a></div>
@@ -181,10 +386,49 @@
         </div>
     </div>
 
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2>CONTACT</h2>
+            <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
+                <input type="hidden" name="accessKey" value="a5e8e783-04d3-4b01-b15a-9141858fd7b2" required>
+                <div class="form-element">
+                    <label class="label">Your Name</label>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-element">
+                    <label class="label">Your E-mail</label>
+                    <input type="text" name="email" placeholder="Your E-mail" required>
+                </div>
+                <div class="form-element">
+                    <label class="label">Your Phone Number(optional)</label>
+                    <input type="text" name="phone" placeholder="Your Phone Number(optional)">
+                </div>
+                <div class="form-element">
+                    <label class="label">Your Mail Subject(optional)</label>
+                    <input type="text" name="subject" placeholder="Your Mail Subject(optional)">
+                </div>
+                <div class="form-element">
+                    <label class="label">Your Message</label>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <input type="text" name="honeypot" style="display:none">
+                <input type="hidden" name="replyTo" value="@">
+                <input type="hidden" name="redirectTo" value="https://aran1218.github.io">
+                <input type="submit" value="SUBMIT">
+                <input type="reset" value="RESET">
+            </form>
+        </div>
+    </div>
+
+    <div class="thank">
+        <h3>Thank you for visiting my portfolio！</h3>
+    </div>
+
     <div class="page_top">TOP</div>
-    <footer>
-        <small>Copyright ©︎ ARAN</small>
-    </footer>
+        <footer>
+            <small>Copyright ©︎ ARAN</small><br>
+            <small>※SDGsに配慮し、このサイトは再生紙を利用しています。</small><br>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,0 +1,151 @@
+/* 共通 */
+html{scroll-behavior: smooth;}
+
+/* フレックスメニュー(PC用) */
+@media screen and (min-width: 1050px) {
+    .menu-btn {
+        opacity: 0;
+    }
+    .menu-container {
+        margin-left: auto;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu__item {
+        display:flex;
+        margin-right: 1%;
+    }
+    .menu a {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        text-decoration: none;
+        color: white;
+    }
+    .menu a:hover {
+        box-shadow: 0 0 10px #383838;
+        background-color: #dddddd;
+        color: #000000;
+    }
+}
+
+/* ハンバーガーメニュー(スマホ・タブレット用) */
+@media screen and (max-width: 1050px) {
+    /*----------------------------
+    * メニュー開閉ボタン
+    *----------------------------*/
+    .menu-btn{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #333;
+        color: #fff;
+    }
+
+    /*----------------------------
+    * メニュー本体
+    *----------------------------*/
+    .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: hsla(0, 0%, 49%, 0.674);
+    }
+    .menu__item{
+        width: 100%;
+        height: auto;
+        padding: .5em 1em;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .menu__item a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .menu__item a:hover{
+        color: rgb(0, 0, 0);
+    }
+
+    /*----------------------------
+    * アニメーション部分
+    *----------------------------*/
+
+    /* アニメーション前のメニューの状態 */
+    .menu{
+        transform: translateX(100vw);
+        transition: all .3s linear;
+        scroll-behavior: smooth;
+    }
+    /* アニメーション後のメニューの状態 */
+    .menu.is-active{
+        transform: translateX(0);
+    }
+    
+
+    /* ボタンの挙動 */
+    .Menu-btn .MenuBtn-BarFrame {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 2px;
+    }
+    .MenuBtn-BarFrame .MenuBtn-BarFrame-FirstBar {
+        position: absolute;
+        display: block;
+        top: 14px;
+        right: 8px;
+        width: 30px;
+        height: 5px;
+        background-color: #ffffff;
+        transition: all .15s linear;
+        transform: translateY(-8px) rotate(0deg);
+    }
+    .MenuBtn-BarFrame .MenuBtn-BarFrame-SecondBar {
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 8px;
+        width: 30px;
+        height: 5px;
+        background-color: #ffffff;
+        transition: all .15s linear;
+    }
+    .MenuBtn-BarFrame .MenuBtn-BarFrame-ThirdBar {
+        position: absolute;
+        display: block;
+        top: 30px;
+        right: 8px;
+        width: 30px;
+        height: 5px;
+        background-color: #ffffff;
+        transition: all .15s linear;
+        transform: translateY(8px) rotate(0deg);
+    }
+
+    .MenuBtn-BarFrame.isClosed .MenuBtn-BarFrame-FirstBar {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .MenuBtn-BarFrame.isClosed .MenuBtn-BarFrame-SecondBar {
+        opacity: 0;
+    }
+    .MenuBtn-BarFrame.isClosed .MenuBtn-BarFrame-ThirdBar {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

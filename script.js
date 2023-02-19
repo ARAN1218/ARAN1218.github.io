@@ -1,4 +1,10 @@
-// swiper
+// hamburger menu ----------------------------------------------------------------
+document.querySelector('.menu-btn').addEventListener('click', function(){
+  document.querySelector('.menu').classList.toggle('is-active');
+  document.querySelector('.MenuBtn-BarFrame').classList.toggle('isClosed');
+});
+
+// swiper ------------------------------------------------------------------------
 const works = new Swiper(".works", {
   slidesPerView: 3 /* この行を追加 */,
   loop: true,
@@ -53,6 +59,7 @@ const studied_books = new Swiper(".studied-books", {
 });
 
 
+// TOPに戻るボタン ------------------------------------------------------------------
 // セレクタ名（.pagetop）に一致する要素を取得
 const pagetop_btn = document.querySelector(".page_top");
 
@@ -73,3 +80,22 @@ function scroll_event() {
     pagetop_btn.style.opacity = "0";
   }
 }
+
+// ダイアログ(モーダル) -------------------------------------------------------------
+// 参考：https://qiita.com/yuki153/items/c909c54204eaab6ca1b2#addeventlistener-を-for-文で複数生成時
+const buttonOpenDialogs = document.getElementsByName("button-open-dialog");
+
+//ダイアログを開くイベント
+for(let i=0,l=buttonOpenDialogs.length; l>i; i++){
+    buttonOpenDialogs[i].addEventListener("click", () => {
+        let target = buttonOpenDialogs[i].dataset.target;
+        let dialogSample = document.getElementById(target);
+        dialogSample.showModal();
+})};
+
+//ダイアログのクリックイベント
+// dialogSample.addEventListener('click', (event) => {
+//   if(event.target.closest('#dialog-container') === null) {
+//     dialogSample.close();
+//   }
+// });
