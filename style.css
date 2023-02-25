@@ -166,6 +166,14 @@ dialog {
     height: 50%;
     position: relative;
 }
+.skill-caption {
+    position: relative;
+    z-index: -1;
+}
+.skills .box:hover .skill-caption {
+	z-index: 2;
+	display: block;
+}
 
 .info ul {
     list-style: none;
@@ -199,11 +207,12 @@ dialog {
 }
 .flexbox {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 .box {
-    width: 100%;
+    width: 25%;
     height: 100%;
 }
 

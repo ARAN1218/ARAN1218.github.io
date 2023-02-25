@@ -110,9 +110,10 @@ html{scroll-behavior: smooth;}
         position: absolute;
         display: block;
         top: 14px;
-        right: 8px;
+        right: 8.5px;
         width: 30px;
         height: 5px;
+        justify-content: center;
         background-color: #ffffff;
         transition: all .15s linear;
         transform: translateY(-8px) rotate(0deg);
@@ -121,7 +122,7 @@ html{scroll-behavior: smooth;}
         position: absolute;
         display: block;
         top: 22px;
-        right: 8px;
+        right: 8.5px;
         width: 30px;
         height: 5px;
         background-color: #ffffff;
@@ -131,7 +132,7 @@ html{scroll-behavior: smooth;}
         position: absolute;
         display: block;
         top: 30px;
-        right: 8px;
+        right: 8.5px;
         width: 30px;
         height: 5px;
         background-color: #ffffff;
