@@ -52,7 +52,7 @@
                     <table class="about-table">
                         <tbody>
                             <tr class="about-tr">
-                                <td valign="top">2019/3　</td>
+                                <td valign="top">2020/3　</td>
                                 <td>神奈川県立麻溝台高等学校　卒業</td>
                             </tr>
                             <tr class="about-tr">
@@ -80,7 +80,7 @@
         <div class="works" id="works">
             <h2>WORKs</h2>
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-01" background-image="img/works/pigeon_detection.webp"><img class="works" src="img/works/pigeon_detection.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-01"><img class="works" src="img/works/pigeon_detection.webp" alt=""></button></div>
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-02"><img class="works" src="img/works/game_recommender.webp" alt=""></button></div>
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-03"><img class="works" src="img/works/password_generators.webp" alt=""></button></div>
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-04"><img class="works" src="img/works/aran_ds.webp" alt=""></button></div>
@@ -99,8 +99,17 @@
         <dialog id="modal-01">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>Pigeon Detection AI</p>
-                    <img src="img/modals/modal-01_1.png" alt="">
+                    <p class="title">Pigeon Detection AI</p>
+                    <!-- 参考：https://illbenet.jp/view/js-switch_fadein_images -->
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-0_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-0_1.webp" class="thumb-0" data-image="img/modals/modal-0_1.webp"></li>
+                            <li><img src="img/modals/modal-0_2.webp" class="thumb-0" data-image="img/modals/modal-0_2.webp"></li>
+                        </ul>
+                    </div>
                     <p>
                         AIが画像の中からハトを探します🐦<br>
                         ※初回アクセスに少々時間がかかります
@@ -116,7 +125,18 @@
         <dialog id="modal-02">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>Game Recommender</p>
+                    <p class="title">Game Recommender</p>
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-1_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-1_1.webp" class="thumb-1" data-image="img/modals/modal-1_1.webp"></li>
+                            <li><img src="img/modals/modal-1_2.webp" class="thumb-1" data-image="img/modals/modal-1_2.webp"></li>
+                            <li><img src="img/modals/modal-1_3.webp" class="thumb-1" data-image="img/modals/modal-1_3.webp"></li>
+                        </ul>
+                    </div>
+
                     <p>AIがあなたの好みに沿ったゲームを提案します。</p>
                     <p>使用技術：HTML/CSS/JS, Python, flask</p>
                     <p>制作期間：1日（※アップデートに2日）</p>
@@ -129,7 +149,17 @@
         <dialog id="modal-03">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>Password Generators</p>
+                    <p class="title">Password Generators</p>
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-2_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-2_1.webp" class="thumb-2" data-image="img/modals/modal-2_1.webp"></li>
+                            <li><img src="img/modals/modal-2_2.webp" class="thumb-2" data-image="img/modals/modal-2_2.webp"></li>
+                        </ul>
+                    </div>
+
                     <p>あなたの個人情報から唯一のパスワードを生成します。</p>
                     <p>使用技術：HTML/CSS/JS, Python, flask</p>
                     <p>制作期間：5日</p>
@@ -142,7 +172,18 @@
         <dialog id="modal-04">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>ARAN DS</p>
+                    <p class="title">ARAN DS</p>
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-3_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-3_1.webp" class="thumb-3" data-image="img/modals/modal-3_1.webp"></li>
+                            <li><img src="img/modals/modal-3_2.webp" class="thumb-3" data-image="img/modals/modal-3_2.webp"></li>
+                            <li><img src="img/modals/modal-3_3.webp" class="thumb-3" data-image="img/modals/modal-3_3.webp"></li>
+                        </ul>
+                    </div>
+
                     <p>CSVファイルを読み込んで簡単なデータ可視化・データ分析をします(パソコン推奨)</p>
                     <p>
                         当時pyscriptという技術が公開されたとの情報を聞き、最新の技術をすぐに体験したいと考え、試しに作ったWebアプリです。
@@ -160,7 +201,18 @@
         <dialog id="modal-05">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>AI Apps</p>
+                    <p class="title">AI Apps</p>
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-4_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-4_1.webp" class="thumb-4" data-image="img/modals/modal-4_1.webp"></li>
+                            <li><img src="img/modals/modal-4_2.webp" class="thumb-4" data-image="img/modals/modal-4_2.webp"></li>
+                            <li><img src="img/modals/modal-4_3.webp" class="thumb-4" data-image="img/modals/modal-4_3.webp"></li>
+                        </ul>
+                    </div>
+
                     <p>人工知能を用いて様々な予測を行います。</p>
                     <p>使用技術：HTML/CSS, Python, Django</p>
                     <p>制作期間：3ヶ月</p>
@@ -173,8 +225,12 @@
         <dialog id="modal-06">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>My portfolio site</p>
+                    <p class="title">My portfolio site</p>
                     <p>私のポートフォリオサイトです。</p>
+                    <p>
+                        今までの作品ではメニューバーから各ページに飛ぶというデザインでしたが、このポートフォリオサイトは一つのhtmlファイルの中に必要な情報を詰め込み、アクセスできるようにしました。
+                        これによって情報を俯瞰しやすい合理性の高いデザインになっただけでなく、新しいWebデザインの実現のための勉強になりました。
+                    </p>
                     <p>使用技術：HTML/CSS/JS</p>
                     <p>制作期間：2022/10/12 ~ NOW</p>
                     <a class="access" href="https://aran1218.github.io">アクセス</a>
@@ -186,7 +242,7 @@
         <dialog id="modal-07">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>Algorithms_library</p>
+                    <p class="title">Algorithms_library</p>
                     <p>数理最適化に関するアルゴリズムをPythonで一から実装したプログラム集です。</p>
                     <p>また、PythonのTkinterライブラリを用いてアルゴリズム可視化アプリを作成しました。</p>
                     <p>(アプリに関してはデスクトップアプリをgithubのReleases機能で配信しています。)</p>
@@ -200,7 +256,7 @@
         <dialog id="modal-08">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>Statistics_library</p>
+                    <p class="title">Statistics_library</p>
                     <p>統計に関する種々の分析手法をPythonで一から実装したプログラム集です。</p>
                     <p>使用技術：Python</p>
                     <p>制作期間：2021/11/28 ~ NOW</p>
@@ -212,7 +268,7 @@
         <dialog id="modal-09">
             <div id="dialog-container">
                 <form id="form" method="dialog">
-                    <p>MachineLearning_library</p>
+                    <p class="title">MachineLearning_library</p>
                     <p>種々の機械学習手法をPythonで一から実装したプログラム集です。</p>
                     <p>使用技術：Python</p>
                     <p>制作期間：2022/11/20 ~ NOW</p>
@@ -238,63 +294,55 @@
             </nav>
         </div>
 
-        <div class="data-analysis">
-            <div class="skills-contents">
-                <h3>DATA ANALYSIS</h3>
-                <div class="flexbox">
-                    <div class="box"><p class="skill-caption">Python</p><img src="img/skills/python.svg" alt=""><p>★★★★☆</p></div>
-                    <div class="box"><p class="skill-caption">R</p><img src="img/skills/R.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">BigQuery</p><img src="img/skills/bigquery.svg" alt=""><p>★★★★☆</p></div>
-                    <div class="box"><p class="skill-caption">MySQL</p><img src="img/skills/mysql.svg" alt=""><p>★★★☆☆</p></div>
-                </div>
+        <div class="skills-contents">
+            <h3>DATA ANALYSIS</h3>
+            <div class="flexbox">
+                <div class="box"><p class="skill-caption">Python</p><img class="skill-img" src="img/skills/python.svg" alt=""><p>★★★★☆</p></div>
+                <div class="box"><p class="skill-caption">R</p><img class="skill-img" src="img/skills/R.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">BigQuery</p><img class="skill-img" src="img/skills/bigquery.svg" alt=""><p>★★★★☆</p></div>
+                <div class="box"><p class="skill-caption">MySQL</p><img class="skill-img" src="img/skills/mysql.svg" alt=""><p>★★★☆☆</p></div>
             </div>
         </div>
 
-        <div class="environment">
-            <div class="skills-contents">
-                <h3>ENVIRONMENT</h3>
-                <div class="flexbox">
-                    <div class="box"><p class="skill-caption">Google Colab</p><img src="img/skills/colab.svg" alt=""><p>★★★★☆</p></div>
-                    <div class="box"><p class="skill-caption">Jupyter Notebook</p><img src="img/skills/jupyter_notebook.svg" alt=""><p>★★★★☆</p></div>
-                    <div class="box"><p class="skill-caption">Visual Studio Code</p><img src="img/skills/vscode.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Rstudio</p><img src="img/skills/Rstudio.svg" alt=""><p>★★☆☆☆</p></div>
-                </div>
+
+        <div class="skills-contents">
+            <h3>ENVIRONMENT</h3>
+            <div class="flexbox">
+                <div class="box"><p class="skill-caption">Google Colab</p><img class="skill-img" src="img/skills/colab.svg" alt=""><p>★★★★☆</p></div>
+                <div class="box"><p class="skill-caption">Jupyter Notebook</p><img class="skill-img" src="img/skills/jupyter_notebook.svg" alt=""><p>★★★★☆</p></div>
+                <div class="box"><p class="skill-caption">Visual Studio Code</p><img class="skill-img" src="img/skills/vscode.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">Rstudio</p><img class="skill-img" src="img/skills/Rstudio.svg" alt=""><p>★★☆☆☆</p></div>
             </div>
         </div>
 
-        <div class="frontend">
-            <div class="skills-contents">
-                <h3>FRONTEND</h3>
-                <div class="flexbox">
-                    <div class="box"><p class="skill-caption">HTML</p><img src="img/skills/html.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">CSS</p><img src="img/skills/css.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Java Script</p><img src="img/skills/js.svg" alt=""><p>★★★☆☆</p></div>
-                </div>
+        <div class="skills-contents">
+            <h3>FRONTEND</h3>
+            <div class="flexbox">
+                <div class="box"><p class="skill-caption">HTML</p><img class="skill-img" src="img/skills/html.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">CSS</p><img class="skill-img" src="img/skills/css.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">Java Script</p><img class="skill-img" src="img/skills/js.svg" alt=""><p>★★★☆☆</p></div>
             </div>
         </div>
 
-        <div class="backend">
-            <div class="skills-contents">
-                <h3>BACKEND</h3>
-                <div class="flexbox">
-                    <div class="box"><p class="skill-caption">Flask</p><img src="img/skills/flask.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Django</p><img src="img/skills/django.svg" alt=""><p>★★☆☆☆</p></div>
-                </div>
+        <div class="skills-contents">
+            <h3>BACKEND</h3>
+            <div class="flexbox">
+                <div class="box"><p class="skill-caption">Flask</p><img class="skill-img" src="img/skills/flask.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">Django</p><img class="skill-img" src="img/skills/django.svg" alt=""><p>★★☆☆☆</p></div>
             </div>
         </div>
 
-        <div class="others">
-            <div class="skills-contents">
-                <h3>OTHERS</h3>
-                <div class="flexbox">
-                    <div class="box"><p class="skill-caption">C</p><img src="img/skills/C.svg" alt=""><p>★☆☆☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Java</p><img src="img/skills/java.svg" alt=""><p>★☆☆☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Processing</p><img src="img/skills/processing.svg" alt=""><p>★☆☆☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Unity</p><img src="img/skills/unity.svg" alt=""><p>★☆☆☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Github</p><img src="img/skills/github.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Slack</p><img src="img/skills/slack.svg" alt=""><p>★★★☆☆</p></div>
-                    <div class="box"><p class="skill-caption">Notion</p><img src="img/skills/notion.svg" alt=""><p>★★☆☆☆</p></div>
-                </div>
+        <div class="skills-contents">
+            <h3>OTHERS</h3>
+            <div class="flexbox">
+                <div class="box"><p class="skill-caption">C</p><img class="skill-img" src="img/skills/C.svg" alt=""><p>★☆☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Java</p><img class="skill-img" src="img/skills/java.svg" alt=""><p>★☆☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Processing</p><img class="skill-img" src="img/skills/processing.svg" alt=""><p>★☆☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Unity</p><img class="skill-img" src="img/skills/unity.svg" alt=""><p>★☆☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Github</p><img class="skill-img" src="img/skills/github.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">Slack</p><img class="skill-img" src="img/skills/slack.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">Notion</p><img class="skill-img" src="img/skills/notion.svg" alt=""><p>★★☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Flutter</p><img class="skill-img" src="img/skills/flutter.svg" alt=""><p>★☆☆☆☆</p></div>
             </div>
         </div>
     </div>
@@ -432,6 +480,8 @@
             <small>Copyright ©︎ ARAN</small><br>
             <small>※SDGsに配慮し、このサイトは再生紙を利用しています。</small><br>
         </footer>
+    </div>
+    
     </div>
 </body>
 </html>

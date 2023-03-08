@@ -59,17 +59,30 @@ const studied_books = new Swiper(".studied-books", {
 });
 
 
+// Skills ------------------------------------------------------------------------
+// imgのhoverで言語名が出現するようにする
+const skill_imgs = document.getElementsByClassName("skill-img")
+const skill_captions = document.getElementsByClassName("skill-caption")
+for(let i=0,l=skill_imgs.length; l>i; i++){
+  // 画像の上に来た時→hoverをつける
+  skill_imgs[i].addEventListener("mouseover", () => {
+    skill_captions[i].classList.add("hover");
+  });
+  // 画像の上から離れた時→hoverを外す
+  skill_imgs[i].addEventListener('mouseleave', function() {
+    skill_captions[i].classList.remove("hover");
+  });
+};
+
+
 // TOPに戻るボタン ------------------------------------------------------------------
 // セレクタ名（.pagetop）に一致する要素を取得
 const pagetop_btn = document.querySelector(".page_top");
 
-// .pagetopをクリックしたら
-pagetop_btn.addEventListener("click", scroll_top);
-
-// ページ上部へスムーズに移動
-function scroll_top() {
+// .pagetopをクリックしたら、ページ上部へスムーズに移動
+pagetop_btn.addEventListener("click", function () {
   window.scroll({ top: 0, behavior: "smooth" });
-}
+});
 
 // スクロールされたら表示
 window.addEventListener("scroll", scroll_event);
@@ -84,18 +97,62 @@ function scroll_event() {
 // ダイアログ(モーダル) -------------------------------------------------------------
 // 参考：https://qiita.com/yuki153/items/c909c54204eaab6ca1b2#addeventlistener-を-for-文で複数生成時
 const buttonOpenDialogs = document.getElementsByName("button-open-dialog");
+// const square_btns = document.getElementsByClassName("square_btn")
+const mainImgs = document.getElementsByClassName('mainImg');
 
 //ダイアログを開くイベント
 for(let i=0,l=buttonOpenDialogs.length; l>i; i++){
-    buttonOpenDialogs[i].addEventListener("click", () => {
-        let target = buttonOpenDialogs[i].dataset.target;
-        let dialogSample = document.getElementById(target);
-        dialogSample.showModal();
-})};
+  const thumbs = document.querySelectorAll('.thumb-' + i);
+  
+  buttonOpenDialogs[i].addEventListener("click", () => {
+    let target = buttonOpenDialogs[i].dataset.target;
+    let dialogSample = document.getElementById(target);
+    if(thumbs.length > 0) {
+      mainImgs[i].src = thumbs[0].dataset.image;
+    };
+    // document.body.classList.add("no_scroll");
+    dialogSample.showModal();
+  });
+
+  
+  // worksの作品紹介画像のギャラリー化
+  thumbs.forEach(function(img,index){
+    img.onclick = function() {
+      mainImgs[i].src = this.dataset.image;
+    }
+  });
+
+  // square_btns[i].addEventListener("click", () => {
+  //   let target = buttonOpenDialogs[i].dataset.target;
+  //   let dialogSample = document.getElementById(target);
+  //   document.body.classList.remove("no_scroll");
+  //   dialogSample.close();
+  // });
+};
+
+// worksの作品紹介画像のギャラリー化
+// thumbs.forEach(function(img,index){
+//   img.onclick = function() {
+//     const mainImg = mainImgs[mainImg_num];
+//     console.log(mainImg_num);
+//     console.log(mainImg);
+//     mainImg.src = this.dataset.image;
+//   }
+// });
 
 //ダイアログのクリックイベント
 // dialogSample.addEventListener('click', (event) => {
 //   if(event.target.closest('#dialog-container') === null) {
 //     dialogSample.close();
+//   }
+// });
+
+
+// worksの作品紹介画像のギャラリー化
+// const thumbs = document.querySelectorAll('.thumb');
+// thumbs.forEach(function(img,index){
+//   img.onclick = function() {
+//     const mainImg = document.getElementById('mainImg');
+//     mainImg.src = this.dataset.image;
 //   }
 // });
