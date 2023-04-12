@@ -130,29 +130,14 @@ for(let i=0,l=buttonOpenDialogs.length; l>i; i++){
   // });
 };
 
-// worksの作品紹介画像のギャラリー化
-// thumbs.forEach(function(img,index){
-//   img.onclick = function() {
-//     const mainImg = mainImgs[mainImg_num];
-//     console.log(mainImg_num);
-//     console.log(mainImg);
-//     mainImg.src = this.dataset.image;
-//   }
-// });
+// メールを送る処理が成功した時のダイアログ
+if(document.location.href == "https://aran1218.github.io/#thank") {
+    document.getElementById("thank").showModal();
+}
 
 //ダイアログのクリックイベント
 // dialogSample.addEventListener('click', (event) => {
 //   if(event.target.closest('#dialog-container') === null) {
 //     dialogSample.close();
-//   }
-// });
-
-
-// worksの作品紹介画像のギャラリー化
-// const thumbs = document.querySelectorAll('.thumb');
-// thumbs.forEach(function(img,index){
-//   img.onclick = function() {
-//     const mainImg = document.getElementById('mainImg');
-//     mainImg.src = this.dataset.image;
 //   }
 // });

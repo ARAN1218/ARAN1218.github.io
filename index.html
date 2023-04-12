@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="My portfolio" />
+    <meta property="og:description" content="My portfolio🐦" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aran1218.github.io/" />
+    <meta property="og:image" content="https://aran1218.github.io/img/system/ARAN_logo.png" />
+    <link rel=apple-touch-icon sizes="180x180" href="img/system/ARAN_logo.png">
+    <link rel=icon type=image/png href="img/system/ARAN_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <link rel=apple-touch-icon sizes="180x180" href="img/system/apple-touch-icon.png">
-    <link rel=icon type=image/png href="img/system/ARAN_logo.png">
     <title>ARAN Portfolio</title>
 </head>
 <body>
@@ -63,6 +68,14 @@
                                 <td valign="top">2024/3　</td>
                                 <td>青山学院大学 理工学部 経営システム工学科　卒業見込み</td>
                             </tr>
+                            <!-- <tr class="about-tr">
+                                <td valign="top">2024/4　</td>
+                                <td>青山学院大学 理工学研究科 マネジメントテクノロジーコース　入学</td>
+                            </tr> -->
+                            <!-- <tr class="about-tr">
+                                <td valign="top">2026/3　</td>
+                                <td>青山学院大学 理工学研究科 マネジメントテクノロジーコース　卒業見込み</td>
+                            </tr> -->
                         </tbody>
                     </table>
                     <p class="title">趣味</p>
@@ -89,6 +102,7 @@
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-07"><img class="works" src="img/works/Algorithms_library.webp" alt=""></button></div>
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-08"><img class="works" src="img/works/Statistics_library.webp" alt=""></button></div>
                 <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-09"><img class="works" src="img/works/MachineLearning_library.webp" alt=""></button></div>
+                <div class="swiper-slide"><button name="button-open-dialog" data-target="modal-10"><img class="works" src="img/works/Dungeon_creator.webp" alt=""></button></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
@@ -269,10 +283,35 @@
             <div id="dialog-container">
                 <form id="form" method="dialog">
                     <p class="title">MachineLearning_library</p>
+                    <div class="thumbs-container">
+                        <div>
+                            <img src="img/modals/modal-4_1.webp" class="mainImg">
+                        </div>
+                        <ul>
+                            <li><img src="img/modals/modal-4_1.webp" class="thumb-4" data-image="img/modals/modal-4_1.webp"></li>
+                            <li><img src="img/modals/modal-4_2.webp" class="thumb-4" data-image="img/modals/modal-4_2.webp"></li>
+                            <li><img src="img/modals/modal-4_3.webp" class="thumb-4" data-image="img/modals/modal-4_3.webp"></li>
+                        </ul>
+                    </div>
+
                     <p>種々の機械学習手法をPythonで一から実装したプログラム集です。</p>
                     <p>使用技術：Python</p>
                     <p>制作期間：2022/11/20 ~ NOW</p>
                     <a class="access" href="https://github.com/ARAN1218/ML_Learning">Github</a>
+                    <button class="square_btn" value="default"></button>
+                </form>
+            </div>
+        </dialog>
+        <dialog id="modal-10">
+            <div id="dialog-container">
+                <form id="form" method="dialog">
+                    <p class="title">Dungeon Creator</p>
+                    <p>パネルをめくり、モンスターを退け、ダンジョンの最深部へと進むローグライクゲームです。</p>
+                    <p>※Web版にアクセスできますが、スマホでの動作を想定しています。PCでのアクセス時は画面サイズを調整してください。</p>
+                    <p>使用技術：Flutter, Dart</p>
+                    <p>制作期間：2023/03/17 ~ NOW</p>
+                    <a class="access" href="https://aran1218.github.io/Dungeon-Creator/#/">アクセス</a>
+                    <a class="access" href="https://github.com/ARAN1218/Dungeon-Creator/">Github</a>
                     <button class="square_btn" value="default"></button>
                 </form>
             </div>
@@ -320,7 +359,7 @@
             <div class="flexbox">
                 <div class="box"><p class="skill-caption">HTML</p><img class="skill-img" src="img/skills/html.svg" alt=""><p>★★★☆☆</p></div>
                 <div class="box"><p class="skill-caption">CSS</p><img class="skill-img" src="img/skills/css.svg" alt=""><p>★★★☆☆</p></div>
-                <div class="box"><p class="skill-caption">Java Script</p><img class="skill-img" src="img/skills/js.svg" alt=""><p>★★★☆☆</p></div>
+                <div class="box"><p class="skill-caption">JavaScript</p><img class="skill-img" src="img/skills/js.svg" alt=""><p>★★★☆☆</p></div>
             </div>
         </div>
 
@@ -329,6 +368,7 @@
             <div class="flexbox">
                 <div class="box"><p class="skill-caption">Flask</p><img class="skill-img" src="img/skills/flask.svg" alt=""><p>★★★☆☆</p></div>
                 <div class="box"><p class="skill-caption">Django</p><img class="skill-img" src="img/skills/django.svg" alt=""><p>★★☆☆☆</p></div>
+                <!-- <div class="box"><p class="skill-caption">Fastapi</p><img class="skill-img" src="img/skills/fastapi.svg" alt=""><p>★★☆☆☆</p></div> -->
             </div>
         </div>
 
@@ -342,7 +382,7 @@
                 <div class="box"><p class="skill-caption">Github</p><img class="skill-img" src="img/skills/github.svg" alt=""><p>★★★☆☆</p></div>
                 <div class="box"><p class="skill-caption">Slack</p><img class="skill-img" src="img/skills/slack.svg" alt=""><p>★★★☆☆</p></div>
                 <div class="box"><p class="skill-caption">Notion</p><img class="skill-img" src="img/skills/notion.svg" alt=""><p>★★☆☆☆</p></div>
-                <div class="box"><p class="skill-caption">Flutter</p><img class="skill-img" src="img/skills/flutter.svg" alt=""><p>★☆☆☆☆</p></div>
+                <div class="box"><p class="skill-caption">Flutter</p><img class="skill-img" src="img/skills/flutter.svg" alt=""><p>★★☆☆☆</p></div>
             </div>
         </div>
     </div>
@@ -372,6 +412,11 @@
                     <td>2022/9/1 ~ 2022/9/28</td>
                     <td>Long-Term internship (Data Scientist)</td>
                     <td>Chugai Pharmaceutical Co.</td>
+                </tr>
+                <tr>
+                    <td>2024/4/1 ~ 2026/3/31</td>
+                    <td>Scholarship</td>
+                    <td>理工学研究科　特別給付奨学金</td>
                 </tr>
                 <tr>
                     <td style="color: red;">2021/9/21 ~ NOW</td>
@@ -430,6 +475,7 @@
                 <div class="swiper-slide"><a href="https://www.amazon.co.jp/データ解析のための統計モデリング入門――一般化線形モデル・階層ベイズモデル・MCMC-確率と情報の科学-久保-拓弥/dp/400006973X"><img src="img/books/stats_modeling.webp" alt=""></a></div>
                 <div class="swiper-slide"><a href="https://www.amazon.co.jp/作ってわかる-アンサンブル学習アルゴリズム入門-坂本-俊之/dp/4863542801"><img src="img/books/ensemble.webp" alt=""></a></div>
                 <div class="swiper-slide"><a href="https://www.amazon.co.jp/日本統計学会公式認定-統計検定準1級対応-統計学実践ワークブック-日本統計学会/dp/478060852X"><img src="img/books/statistics_workbook.webp" alt=""></a></div>
+                <div class="swiper-slide"><a href="https://www.amazon.co.jp/わかりやすいパターン認識-石井-健一郎/dp/4274131491"><img src="img/books/pattern_recognition.webp" alt=""></a></div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
@@ -464,7 +510,7 @@
                 </div>
                 <input type="text" name="honeypot" style="display:none">
                 <input type="hidden" name="replyTo" value="@">
-                <input type="hidden" name="redirectTo" value="https://aran1218.github.io">
+                <input type="hidden" name="redirectTo" value="https://aran1218.github.io/#thank">
                 <input type="submit" value="SUBMIT">
                 <input type="reset" value="RESET">
             </form>
@@ -474,6 +520,16 @@
     <div class="thank">
         <h3>Thank you for visiting my portfolio！</h3>
     </div>
+
+    <dialog id="thank">
+        <h3>Mail Sending Completed!!</h3>
+        <p>メールありがとうございます。</p>
+        <p>返信までお時間いただく可能性がございますが、何卒ご容赦いただきますようお願い申し上げます。</p>
+        <p>この度は私のポートフォリオサイトにご訪問いただき誠にありがとうございました。</p>
+        <form id="form" method="dialog">
+            <button class="square_btn" value="default"></button>
+        </form>
+    </dialog>
 
     <div class="page_top">TOP</div>
         <footer>
