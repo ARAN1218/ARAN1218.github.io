@@ -10,6 +10,15 @@ p.title {
     font-weight: bold;
     font-size: 120%;
 }
+.section-title{ /* セクションタイトルの横に棒つける */
+    display: inline;
+    border-left: 10px solid rgb(165, 165, 165);
+    border-right: 10px solid rgb(165, 165, 165);
+    padding-inline: 10px;
+}
+.section {
+    margin-bottom: 10%;
+}
 
 /* body */
 body {
@@ -28,6 +37,12 @@ div.body {
 h2 {
     text-align: center;
     font-size: xx-large;
+}
+/* sub-sectiontitle */
+h3 {
+    text-align: center;
+    font-size: x-large;
+    padding-top: 10px;
 }
 
 /* table */
@@ -189,8 +204,9 @@ dialog {
 
 .info ul {
     list-style: none;
-    width:fit-content;
+    width: fit-content;
     margin: auto;
+    font-size: large;
 }
 .skills .skills-contents:nth-child(odd) {
     text-align: center;
