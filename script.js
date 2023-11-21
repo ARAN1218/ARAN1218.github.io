@@ -4,6 +4,40 @@ document.querySelector('.menu-btn').addEventListener('click', function(){
   document.querySelector('.MenuBtn-BarFrame').classList.toggle('isClosed');
 });
 
+// home menu
+var smoothScroll = function (range) {
+  var position = 0; // スクロールする位置
+  var progress = 0; // 現在の進捗 0 ～ 100
+  var easeOut = function (p) { // ease-out に当てはめた値を返す
+      return p * (2 - p);
+  };
+  var move = function () { // 実際にスクロールを行う
+      progress++; // 進捗を進める
+      position = range * easeOut(progress / 100); // スクロールする位置を計算する
+
+      window.scrollTo(0, position); // スクロールさせる
+
+      if (position < range) { // 現在位置が目的位置より進んでいなければアニメーションを続行させる
+          requestAnimationFrame(move);
+      }
+  };
+
+  requestAnimationFrame(move); // 初回呼び出し
+};
+
+const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+scorrllLinks.forEach((scorrllLink) => {
+    scorrllLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        const hrefLink = scorrllLink.getAttribute("href");
+        const targetContent = document.getElementById(hrefLink.replace("#", ""));
+        const rectTop = targetContent.getBoundingClientRect().top;
+        const positionY = window.pageYOffset;
+        const target = rectTop + positionY - 50;
+        smoothScroll(target); // 800px の位置までスムーススクロールする
+    });
+});
+
 // swiper ------------------------------------------------------------------------
 const works = new Swiper(".works", {
   slidesPerView: 3 /* この行を追加 */,
