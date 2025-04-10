@@ -192,6 +192,11 @@ dialog {
     height: 50%;
     position: relative;
 }
+.skills img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+  
 .skill-caption {
     position: relative;
     z-index: -1;
